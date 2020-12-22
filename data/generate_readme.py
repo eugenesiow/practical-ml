@@ -6,20 +6,25 @@ from pytablewriter import MarkdownTableWriter
 
 def create_anchor(title):
     title = title.lower().replace(' ', '-').replace('(', '').replace(')', '')
-    return '#{}'.format(title)
+    return '#-{}'.format(title)
 
 
 def create_toc(toc_contents):
     toc_str = '## 📖 Table of Contents\n'
+    toc_str += '- [Introduction](#-introduction)\n'
     for topic in toc_contents:
         toc_str += '- [{}]({})\n'.format(topic, create_anchor(topic))
+    toc_str += '- [Alternative](#-alternatives)\n'
+    toc_str += '- [Contributors](#-contributors)\n'
+    toc_str += '- [License](#-license)\n'
     return toc_str
 
 
 def create_section(section_list, name):
     counter = 0
-    section_str = '## [↑](#table-of-contents) {}\n\n'.format(name)
-    header = ['Task', 'Dataset', 'SOTA', 'Acc Metric', 'SOTA Acc', 'Our Acc', 'Our Model', 'Article', 'Notebook']
+    section_str = '## [↑](#-table-of-contents) {}\n\n'.format(name)
+    # header = ['Task', 'Dataset', 'SOTA', 'Metric', 'SOTA Acc', 'Our Acc', 'Our Model', '📝', 'Notebook']
+    header = ['Task', 'Dataset', 'SOTA', 'Metric', 'SOTA Acc', 'Our Acc', '📝', 'Notebook']
     values_matrix = []
     for row in section_list:
         values_matrix.append([
@@ -29,10 +34,11 @@ def create_section(section_list, name):
             row[5],
             row[6],
             row[7],
-            row[8],
-            '[📝]({})'.format(row[9]),
+            # row[8],
+            '[📝]({} "Article")'.format(row[9]),
             '[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]'
-            '(https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{})'.format(row[10])
+            '(https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{}'
+            ' "Open in Colab")'.format(row[10])
         ])
         counter += 1
     writer = MarkdownTableWriter(

@@ -23,8 +23,8 @@
 
 <div align="center">
   <h3>
-    <a href="https://news.machinelearning.sg/posts/an_english_to_mandarin_ai_glossary_of_state_of_the_art_topics">
-      Article
+    <a href="https://news.machinelearning.sg/tags/jupyter-notebook/">
+      Articles
     </a>
     <span> | </span>
     <a href="CONTRIBUTING.md">
@@ -35,9 +35,25 @@
 
 <!-- TOC -->
 
+## [↑](#-table-of-contents) Introduction
+
+> "Progress is a natural result of staying focused on the process of doing anything." - Thomas Sterner, The Practicing Mind
+
+Pratical ML is a collection of Jupyter notebooks where one can learn by example and actively practice training 
+state-of-the-art machine learning models and algorithms. 
+
+To get started, find a task you are interested in below and hit the 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
+button on that row or hit the article [📝](https://news.machinelearning.sg/tags/jupyter-notebook/) button if you prefer 
+to read instead.
+
 <!-- CONTENT -->
 
-## Contributors
+## [↑](#-table-of-contents) Alternatives
+
+- [Google Colab vs Paperspace Gradient](https://news.machinelearning.sg/posts/google_colab_vs_paperspace_gradient/)
+
+## [↑](#-table-of-contents) Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -47,7 +63,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 This project follows the [all-contributors](https://allcontributors.org) specification.
 Contributions of any kind are welcome!
 
-## License
+## [↑](#-table-of-contents) License
 [MIT](LICENSE)
 
 ---

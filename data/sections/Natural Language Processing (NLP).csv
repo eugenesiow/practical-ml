@@ -1,2 +1,3 @@
 task,dataset,dataset_link,sota,sota_link,metric,sota_acc,notebook_acc,notebook_model,article,notebook
 Sarcarsm Detection,Cai et al. (2019),https://www.aclweb.org/anthology/P19-1239/,Pan et al. (2020),https://www.aclweb.org/anthology/2020.findings-emnlp.124/,F1,82.9,92.2,RoBERTa,https://news.machinelearning.sg/posts/learn_to_train_a_state_of_the_art_model_for_sarcasm_detection,Sarcasm_Detection_Twitter.ipynb
+Sentiment Analysis,IMDB (2011),https://ai.stanford.edu/~amaas/data/sentiment/,Yang et al. (2019),https://arxiv.org/pdf/1906.08237.pdf,ACC,96.2,92.2,XLNet,https://news.machinelearning.sg/posts/sentiment_analysis_on_movie_reviews_with_xlnet,Sentiment_Analysis_Movie_Reviews.ipynb
