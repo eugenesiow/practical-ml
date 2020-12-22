@@ -14,7 +14,7 @@ def create_toc(toc_contents):
     toc_str += '- [Introduction](#-introduction)\n'
     for topic in toc_contents:
         toc_str += '- [{}]({})\n'.format(topic, create_anchor(topic))
-    toc_str += '- [Alternative](#-alternatives)\n'
+    toc_str += '- [Alternatives](#-alternatives)\n'
     toc_str += '- [Contributors](#-contributors)\n'
     toc_str += '- [License](#-license)\n'
     return toc_str
