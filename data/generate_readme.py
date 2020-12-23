@@ -24,14 +24,15 @@ def create_section(section_list, name):
     counter = 0
     section_str = '## [↑](#-table-of-contents) {}\n\n'.format(name)
     # header = ['Task', 'Dataset', 'SOTA', 'Metric', 'SOTA Acc', 'Our Acc', 'Our Model', '📝', 'Notebook']
-    header = ['Task', 'Dataset', 'SOTA', 'Metric', 'SOTA Acc', 'Our Acc', '📝', 'Notebook']
+    # header = ['Task', 'Dataset', 'SOTA', 'Metric', 'SOTA Acc', 'Our Acc', '📝', 'Notebook']
+    header = ['Task', 'Dataset', 'SOTA', 'SOTA Acc', 'Our Acc', '📝', 'Notebook']
     values_matrix = []
     for row in section_list:
         values_matrix.append([
             row[0],
             '[{}]({})'.format(row[1], row[2]),
             '[{}]({})'.format(row[3], row[4]),
-            row[5],
+            # row[5],
             row[6],
             row[7],
             # row[8],
