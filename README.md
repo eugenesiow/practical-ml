@@ -9,7 +9,7 @@
 <div align="center">
   <!-- Notebooks -->
   <a href="https://github.com/eugenesiow/practical-ml">
-    <img src="https://img.shields.io/badge/notebooks-6-blue.svg?style=flat-square"
+    <img src="https://img.shields.io/badge/notebooks-7-blue.svg?style=flat-square"
       alt="Notebooks" />
   </a>
   <!-- License -->
@@ -35,6 +35,7 @@
 
 ## 📖 Table of Contents
 - [Introduction](#-introduction)
+- [Computer Vision (CV)](#-computer-vision-cv)
 - [Natural Language Processing (NLP)](#-natural-language-processing-nlp)
 - [Alternatives](#-alternatives)
 - [Contributors](#-contributors)
@@ -52,6 +53,13 @@ To get started, find a task you are interested in below and hit the
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 button on that row or hit the article [📝](https://news.machinelearning.sg/tags/jupyter-notebook/) button if you prefer 
 to read instead.
+
+## [↑](#-table-of-contents) Computer Vision (CV)
+
+|         Task          | Dataset |SOTA|SOTA Acc|Our Acc|                                                        📝                                                         |                                                                                                          Notebook                                                                                                          |
+|-----------------------|---------|----|--------|-------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Remove Image Background|Own Photo|-   |-       |-      |[📝](https://news.machinelearning.sg/posts/beautiful_profile_pics_remove_background_image_with_deeplabv3 "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Remove_Image_Background_DeepLabV3.ipynb "Open in Colab")|
+
 
 ## [↑](#-table-of-contents) Natural Language Processing (NLP)
 

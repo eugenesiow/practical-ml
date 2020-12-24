@@ -30,8 +30,8 @@ def create_section(section_list, name):
     for row in section_list:
         values_matrix.append([
             row[0],
-            '[{}]({})'.format(row[1], row[2]),
-            '[{}]({})'.format(row[3], row[4]),
+            '[{}]({})'.format(row[1], row[2]) if row[2] else row[1],
+            '[{}]({})'.format(row[3], row[4]) if row[4] else row[3],
             # row[5],
             row[6],
             row[7],

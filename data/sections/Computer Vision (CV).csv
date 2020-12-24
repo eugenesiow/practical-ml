@@ -1,0 +1,2 @@
+task,dataset,dataset_link,sota,sota_link,metric,sota_acc,notebook_acc,notebook_model,article,notebook
+Remove Image Background,Own Photo,,-,,-,-,-,DeepLabV3,https://news.machinelearning.sg/posts/beautiful_profile_pics_remove_background_image_with_deeplabv3,Remove_Image_Background_DeepLabV3.ipynb
