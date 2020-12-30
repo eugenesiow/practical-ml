@@ -17,6 +17,7 @@ def create_toc(toc_contents):
     toc_str += '- [Alternatives](#-alternatives)\n'
     toc_str += '- [Contributors](#-contributors)\n'
     toc_str += '- [License](#-license)\n'
+    toc_str += '- [Citation](#-citation)\n'
     return toc_str
 
 

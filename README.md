@@ -40,6 +40,7 @@
 - [Alternatives](#-alternatives)
 - [Contributors](#-contributors)
 - [License](#-license)
+- [Citation](#-citation)
 
 
 ## [↑](#-table-of-contents) Introduction
@@ -92,9 +93,22 @@ Contributions of any kind are welcome!
 ## [↑](#-table-of-contents) License
 [MIT](LICENSE)
 
+## [↑](#-table-of-contents) Citation
+
+If you want to cite `practical-ml`, use the following Bibtex entry:
+```
+@misc{siow2020practicalml,
+  title={Practical Machine Learning: A Collection of Machine Learning Experiments in Notebooks},
+  author={Eugene Siow},
+  year={2020},
+  url={https://github.com/eugenesiow/practical-ml},
+  note={Available at: https://github.com/eugenesiow/practical-ml}
+}
+```
+
 ---
 
 <div align="center">
-  <sub>Built with ❤︎ by the  
-  <a href="https://machinelearning.sg">ML community in Singapore</a>.
+  <sub>Built with ❤︎ by a  
+  <a href="https://machinelearning.sg">Singaporean</a>.
 </div>
