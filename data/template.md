@@ -82,6 +82,6 @@ If you want to cite `practical-ml`, use the following Bibtex entry:
 ---
 
 <div align="center">
-  <sub>Built with ❤︎ by a  
-  <a href="https://machinelearning.sg">Singaporean</a>.
+  <sub>Built with ❤︎ in   
+  <a href="https://machinelearning.sg">Singapore</a>.
 </div>

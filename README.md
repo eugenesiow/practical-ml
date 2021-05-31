@@ -9,7 +9,7 @@
 <div align="center">
   <!-- Notebooks -->
   <a href="https://github.com/eugenesiow/practical-ml">
-    <img src="https://img.shields.io/badge/notebooks-9-blue.svg?style=flat-square"
+    <img src="https://img.shields.io/badge/notebooks-10-blue.svg?style=flat-square"
       alt="Notebooks" />
   </a>
   <!-- License -->
@@ -57,9 +57,10 @@ to read instead.
 
 ## [↑](#-table-of-contents) Computer Vision (CV)
 
-|         Task          | Dataset |SOTA|SOTA Acc|Our Acc|                                                        📝                                                         |                                                                                                          Notebook                                                                                                          |
-|-----------------------|---------|----|--------|-------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Remove Image Background|Own Photo|-   |-       |-      |[📝](https://news.machinelearning.sg/posts/beautiful_profile_pics_remove_background_image_with_deeplabv3 "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Remove_Image_Background_DeepLabV3.ipynb "Open in Colab")|
+|          Task           | Dataset |SOTA|SOTA Acc|Our Acc|                                                        📝                                                         |                                                                                                          Notebook                                                                                                          |
+|-------------------------|---------|----|--------|-------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Detect People From Images|Own Photo|-   |-       |-      |[📝](https://news.machinelearning.sg/posts/object_detection_with_yolov5 "Article")                                 |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Detect_Persons_From_Image_YOLOv5.ipynb "Open in Colab") |
+|Remove Image Background  |Own Photo|-   |-       |-      |[📝](https://news.machinelearning.sg/posts/beautiful_profile_pics_remove_background_image_with_deeplabv3 "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Remove_Image_Background_DeepLabV3.ipynb "Open in Colab")|
 
 
 ## [↑](#-table-of-contents) Natural Language Processing (NLP)
@@ -111,6 +112,6 @@ If you want to cite `practical-ml`, use the following Bibtex entry:
 ---
 
 <div align="center">
-  <sub>Built with ❤︎ by a  
-  <a href="https://machinelearning.sg">Singaporean</a>.
+  <sub>Built with ❤︎ in   
+  <a href="https://machinelearning.sg">Singapore</a>.
 </div>
