@@ -1,0 +1,2 @@
+task,dataset,dataset_link,sota,sota_link,metric,sota_acc,notebook_acc,notebook_model,article,notebook
+Text-to-Speech,Own Text,,-,,-,-,-,SileroTTS,https://news.machinelearning.sg/posts/text_to_speech_with_silero,Text_to_Speech_with_Silero.ipynb

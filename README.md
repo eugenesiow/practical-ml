@@ -9,7 +9,7 @@
 <div align="center">
   <!-- Notebooks -->
   <a href="https://github.com/eugenesiow/practical-ml">
-    <img src="https://img.shields.io/badge/notebooks-10-blue.svg?style=flat-square"
+    <img src="https://img.shields.io/badge/notebooks-11-blue.svg?style=flat-square"
       alt="Notebooks" />
   </a>
   <!-- License -->
@@ -37,6 +37,7 @@
 - [Introduction](#-introduction)
 - [Computer Vision (CV)](#-computer-vision-cv)
 - [Natural Language Processing (NLP)](#-natural-language-processing-nlp)
+- [Speech](#-speech)
 - [Alternatives](#-alternatives)
 - [Contributors](#-contributors)
 - [License](#-license)
@@ -75,6 +76,13 @@ to read instead.
 |Sarcarsm Detection           |[Cai et al. (2019)](https://www.aclweb.org/anthology/P19-1239/)                                                                                                  |[Pan et al. (2020)](https://www.aclweb.org/anthology/2020.findings-emnlp.124/)|82.9    |**92.2**|[📝](https://news.machinelearning.sg/posts/learn_to_train_a_state_of_the_art_model_for_sarcasm_detection "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Sarcasm_Detection_Twitter.ipynb "Open in Colab")               |
 |Sentiment Analysis           |[IMDB](https://ai.stanford.edu/~amaas/data/sentiment/)                                                                                                           |[Yang et al. (2019)](https://arxiv.org/pdf/1906.08237.pdf)                    |**96.2**|92.2    |[📝](https://news.machinelearning.sg/posts/sentiment_analysis_on_movie_reviews_with_xlnet "Article")               |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Sentiment_Analysis_Movie_Reviews.ipynb "Open in Colab")        |
 |Sentiment Analysis (CN)      |[WAIMAI_10K](https://github.com/SophonPlus/ChineseNlpCorpus#%E6%83%85%E6%84%9F%E8%A7%82%E7%82%B9%E8%AF%84%E8%AE%BA-%E5%80%BE%E5%90%91%E6%80%A7%E5%88%86%E6%9E%90)|[BERT](https://github.com/BruceJust/Sentiment-classification-by-BERT)         |89      |**91.5**|[📝](https://news.machinelearning.sg/posts/sentiment_analysis_in_mandarin_with_xlnet "Article")                    |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Sentiment_Analysis_Mandarin_Food_Reviews.ipynb "Open in Colab")|
+
+
+## [↑](#-table-of-contents) Speech
+
+|     Task     |Dataset |SOTA|SOTA Acc|Our Acc|                                       📝                                       |                                                                                                      Notebook                                                                                                       |
+|--------------|--------|----|--------|-------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Text-to-Speech|Own Text|-   |-       |-      |[📝](https://news.machinelearning.sg/posts/text_to_speech_with_silero "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Text_to_Speech_with_Silero.ipynb "Open in Colab")|
 
 
 
