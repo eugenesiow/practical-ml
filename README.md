@@ -9,7 +9,7 @@
 <div align="center">
   <!-- Notebooks -->
   <a href="https://github.com/eugenesiow/practical-ml">
-    <img src="https://img.shields.io/badge/notebooks-12-blue.svg?style=flat-square"
+    <img src="https://img.shields.io/badge/notebooks-13-blue.svg?style=flat-square"
       alt="Notebooks" />
   </a>
   <!-- License -->
@@ -60,6 +60,7 @@ to read instead.
 
 |               Task               | Dataset |SOTA|SOTA Acc|Our Acc|                                                        📝                                                         |                                                                                                          Notebook                                                                                                          |
 |----------------------------------|---------|----|--------|-------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Anime Super Resolution: Waifu2x   |Image    |-   |-       |-      |[📝](https://news.machinelearning.sg/posts/anime_super_resolution_with_pytorch "Article")                          |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Anime_Super_Resolution_PyTorch.ipynb "Open in Colab")   |
 |Detect People From Images: YOLOv5 |Own Photo|-   |-       |-      |[📝](https://news.machinelearning.sg/posts/object_detection_with_yolov5 "Article")                                 |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Detect_Persons_From_Image_YOLOv5.ipynb "Open in Colab") |
 |Remove Image Background: DeepLabV3|Own Photo|-   |-       |-      |[📝](https://news.machinelearning.sg/posts/beautiful_profile_pics_remove_background_image_with_deeplabv3 "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Remove_Image_Background_DeepLabV3.ipynb "Open in Colab")|
 
