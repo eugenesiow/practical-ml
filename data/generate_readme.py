@@ -22,26 +22,41 @@ def create_toc(toc_contents):
 
 
 def create_section(section_list, name):
+    long_form = ['Natural Language Processing (NLP)']
     counter = 0
     section_str = '## [↑](#-table-of-contents) {}\n\n'.format(name)
     # header = ['Task', 'Dataset', 'SOTA', 'Metric', 'SOTA Acc', 'Our Acc', 'Our Model', '📝', 'Notebook']
     # header = ['Task', 'Dataset', 'SOTA', 'Metric', 'SOTA Acc', 'Our Acc', '📝', 'Notebook']
-    header = ['Task', 'Dataset', 'SOTA', 'SOTA Acc', 'Our Acc', '📝', 'Notebook']
+    if name in long_form:
+        header = ['Task', 'Dataset', 'SOTA', 'SOTA Acc', 'Our Acc', '📝', 'Notebook']
+    else:
+        header = ['Task', 'Dataset', 'Our Model', '📝', 'Notebook']
     values_matrix = []
     for row in section_list:
-        values_matrix.append([
-            row[0],
-            '[{}]({})'.format(row[1], row[2]) if row[2] else row[1],
-            '[{}]({})'.format(row[3], row[4]) if row[4] else row[3],
-            # row[5],
-            row[6],
-            row[7],
-            # row[8],
-            '[📝]({} "Article")'.format(row[9]),
-            '[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]'
-            '(https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{}'
-            ' "Open in Colab")'.format(row[10])
-        ])
+        if name in long_form:
+            values_matrix.append([
+                row[0],
+                '[{}]({})'.format(row[1], row[2]) if row[2] else row[1],
+                '[{}]({})'.format(row[3], row[4]) if row[4] else row[3],
+                # row[5],
+                row[6],
+                row[7],
+                # row[8],
+                '[📝]({} "Article")'.format(row[9]),
+                '[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]'
+                '(https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{}'
+                ' "Open in Colab")'.format(row[10])
+            ])
+        else:
+            values_matrix.append([
+                row[0],
+                '[{}]({})'.format(row[1], row[2]) if row[2] else row[1],
+                row[8],
+                '[📝]({} "Article")'.format(row[9]),
+                '[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]'
+                '(https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{}'
+                ' "Open in Colab")'.format(row[10])
+            ])
         counter += 1
     writer = MarkdownTableWriter(
         headers=header,
