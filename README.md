@@ -9,7 +9,7 @@
 <div align="center">
   <!-- Notebooks -->
   <a href="https://github.com/eugenesiow/practical-ml">
-    <img src="https://img.shields.io/badge/notebooks-13-blue.svg?style=flat-square"
+    <img src="https://img.shields.io/badge/notebooks-14-blue.svg?style=flat-square"
       alt="Notebooks" />
   </a>
   <!-- License -->
@@ -81,12 +81,11 @@ to read instead.
 
 ## [↑](#-table-of-contents) Speech
 
-|     Task     |Dataset|    Our Model     |                                               📝                                               |                                                                                                              Notebook                                                                                                               |
-|--------------|-------|------------------|------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Text-to-Speech|Text   |SileroTTS         |[📝](https://news.machinelearning.sg/posts/text_to_speech_with_silero "Article")                |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Text_to_Speech_with_Silero.ipynb "Open in Colab")                |
-|Text-to-Speech|Text   |Tacotron2+WaveGlow|[📝](https://news.machinelearning.sg/posts/text_to_speech_with_tacotron2_and_waveglow "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Text_to_Speech_with_Tacotron2_and_WaveGlow.ipynb "Open in Colab")|
-
-
+|         Task          | Dataset |    Our Model     |                                               📝                                               |                                                                                                              Notebook                                                                                                               |
+|-----------------------|---------|------------------|------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Singlish Text-to-Speech|IMDA     |FastSpeech2+MelGAN|[📝](https://github.com/eugenesiow/practical-ml#-speech "Article")                              |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Singlish_Text_to_Speech_with_Malaya_Speech.ipynb "Open in Colab")|
+|Text-to-Speech         |LJ Speech|Tacotron2+WaveGlow|[📝](https://news.machinelearning.sg/posts/text_to_speech_with_tacotron2_and_waveglow "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Text_to_Speech_with_Tacotron2_and_WaveGlow.ipynb "Open in Colab")|
+|Text-to-Speech         |Private  |SileroTTS         |[📝](https://news.machinelearning.sg/posts/text_to_speech_with_silero "Article")                |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Text_to_Speech_with_Silero.ipynb "Open in Colab")                |
 
 
 ## [↑](#-table-of-contents) Alternatives

@@ -1,3 +1,4 @@
 task,dataset,dataset_link,sota,sota_link,metric,sota_acc,notebook_acc,notebook_model,article,notebook
-Text-to-Speech,Text,,-,,-,-,-,SileroTTS,https://news.machinelearning.sg/posts/text_to_speech_with_silero,Text_to_Speech_with_Silero.ipynb
-Text-to-Speech,Text,,-,,-,-,-,Tacotron2+WaveGlow,https://news.machinelearning.sg/posts/text_to_speech_with_tacotron2_and_waveglow,Text_to_Speech_with_Tacotron2_and_WaveGlow.ipynb
+Text-to-Speech,Private,,-,,-,-,-,SileroTTS,https://news.machinelearning.sg/posts/text_to_speech_with_silero,Text_to_Speech_with_Silero.ipynb
+Text-to-Speech,LJ Speech,,-,,-,-,-,Tacotron2+WaveGlow,https://news.machinelearning.sg/posts/text_to_speech_with_tacotron2_and_waveglow,Text_to_Speech_with_Tacotron2_and_WaveGlow.ipynb
+Singlish Text-to-Speech,IMDA,,-,,-,-,-,FastSpeech2+MelGAN,https://github.com/eugenesiow/practical-ml#-speech,Singlish_Text_to_Speech_with_Malaya_Speech.ipynb
