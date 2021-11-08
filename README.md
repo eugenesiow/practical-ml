@@ -9,7 +9,7 @@
 <div align="center">
   <!-- Notebooks -->
   <a href="https://github.com/eugenesiow/practical-ml">
-    <img src="https://img.shields.io/badge/notebooks-16-blue.svg?style=flat-square"
+    <img src="https://img.shields.io/badge/notebooks-17-blue.svg?style=flat-square"
       alt="Notebooks" />
   </a>
   <!-- License -->
@@ -58,12 +58,13 @@ to read instead.
 
 ## [↑](#-table-of-contents) Computer Vision (CV)
 
-|            Task             |Dataset| Our Model  |                                                        📝                                                         |                                                                                                          Notebook                                                                                                          |
-|-----------------------------|-------|------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Anime Super Resolution       |Image  |Waifu2x+CARN|[📝](https://news.machinelearning.sg/posts/anime_super_resolution_with_pytorch "Article")                          |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Anime_Super_Resolution_PyTorch.ipynb "Open in Colab")   |
-|Detect People From Images    |Photo  |YOLOv5      |[📝](https://news.machinelearning.sg/posts/object_detection_with_yolov5 "Article")                                 |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Detect_Persons_From_Image_YOLOv5.ipynb "Open in Colab") |
-|Optical Character Recognition|Image  |TrOCR       |[📝](https://news.machinelearning.sg/posts/ocr_from_images_with_transformers "Article")                            |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/OCR_from_Images_with_Transformers.ipynb "Open in Colab")|
-|Remove Image Background      |Photo  |DeepLabV3   |[📝](https://news.machinelearning.sg/posts/beautiful_profile_pics_remove_background_image_with_deeplabv3 "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Remove_Image_Background_DeepLabV3.ipynb "Open in Colab")|
+|            Task             |Dataset| Our Model  |                                                        📝                                                         |                                                                                                              Notebook                                                                                                              |
+|-----------------------------|-------|------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Anime Character GAN          |Private|StyleGAN2   |[📝](https://news.machinelearning.sg/posts/anicharagan_anime_character_generation_with_stylegan2 "Article")        |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Anime_Character_Generation_with_StyleGAN2.ipynb "Open in Colab")|
+|Anime Super Resolution       |Image  |Waifu2x+CARN|[📝](https://news.machinelearning.sg/posts/anime_super_resolution_with_pytorch "Article")                          |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Anime_Super_Resolution_PyTorch.ipynb "Open in Colab")           |
+|Detect People From Images    |Photo  |YOLOv5      |[📝](https://news.machinelearning.sg/posts/object_detection_with_yolov5 "Article")                                 |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Detect_Persons_From_Image_YOLOv5.ipynb "Open in Colab")         |
+|Optical Character Recognition|Image  |TrOCR       |[📝](https://news.machinelearning.sg/posts/ocr_from_images_with_transformers "Article")                            |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/OCR_from_Images_with_Transformers.ipynb "Open in Colab")        |
+|Remove Image Background      |Photo  |DeepLabV3   |[📝](https://news.machinelearning.sg/posts/beautiful_profile_pics_remove_background_image_with_deeplabv3 "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Remove_Image_Background_DeepLabV3.ipynb "Open in Colab")        |
 
 
 ## [↑](#-table-of-contents) Natural Language Processing (NLP)

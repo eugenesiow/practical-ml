@@ -3,3 +3,4 @@ Remove Image Background,Photo,,-,,-,-,-,DeepLabV3,https://news.machinelearning.s
 Detect People From Images,Photo,,-,,-,-,-,YOLOv5,https://news.machinelearning.sg/posts/object_detection_with_yolov5,Detect_Persons_From_Image_YOLOv5.ipynb
 Anime Super Resolution,Image,,-,,-,-,-,Waifu2x+CARN,https://news.machinelearning.sg/posts/anime_super_resolution_with_pytorch,Anime_Super_Resolution_PyTorch.ipynb
 Optical Character Recognition,Image,,-,,-,-,-,TrOCR,https://news.machinelearning.sg/posts/ocr_from_images_with_transformers,OCR_from_Images_with_Transformers.ipynb
+Anime Character GAN,Private,,-,,-,-,-,StyleGAN2,https://news.machinelearning.sg/posts/anicharagan_anime_character_generation_with_stylegan2,Anime_Character_Generation_with_StyleGAN2.ipynb
