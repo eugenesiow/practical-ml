@@ -4,3 +4,4 @@ Detect People From Images,Photo,,-,,-,-,-,YOLOv5,https://news.machinelearning.sg
 Anime Super Resolution,Image,,-,,-,-,-,Waifu2x+CARN,https://news.machinelearning.sg/posts/anime_super_resolution_with_pytorch,Anime_Super_Resolution_PyTorch.ipynb
 Optical Character Recognition,Image,,-,,-,-,-,TrOCR,https://news.machinelearning.sg/posts/ocr_from_images_with_transformers,OCR_from_Images_with_Transformers.ipynb
 Anime Character GAN,Private,,-,,-,-,-,StyleGAN2,https://news.machinelearning.sg/posts/anicharagan_anime_character_generation_with_stylegan2,Anime_Character_Generation_with_StyleGAN2.ipynb
+Face to Anime,Photo,,-,,-,-,-,AnimeGANv2,https://news.machinelearning.sg/posts/face_to_anime_with_animeganv2,Face_to_Anime_with_AnimeGANv2.ipynb
