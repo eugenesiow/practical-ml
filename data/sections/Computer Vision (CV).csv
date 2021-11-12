@@ -5,3 +5,4 @@ Anime Super Resolution,Image,,-,,-,-,-,Waifu2x+CARN,https://news.machinelearning
 Optical Character Recognition,Image,,-,,-,-,-,TrOCR,https://news.machinelearning.sg/posts/ocr_from_images_with_transformers,OCR_from_Images_with_Transformers.ipynb
 Anime Character GAN,Private,,-,,-,-,-,StyleGAN2,https://news.machinelearning.sg/posts/anicharagan_anime_character_generation_with_stylegan2,Anime_Character_Generation_with_StyleGAN2.ipynb
 Face to Anime,Photo,,-,,-,-,-,AnimeGANv2,https://news.machinelearning.sg/posts/face_to_anime_with_animeganv2,Face_to_Anime_with_AnimeGANv2.ipynb
+Art Generation,WikiArt,,-,,-,-,-,v-diffusion+CLIP,https://news.machinelearning.sg/posts/art_generation_with_v_diffusion,Art_Generation_with_v_Diffusion.ipynb
