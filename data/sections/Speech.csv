@@ -3,3 +3,4 @@ Text-to-Speech,Private,,-,,-,-,-,SileroTTS,https://news.machinelearning.sg/posts
 Text-to-Speech,LJ Speech,https://keithito.com/LJ-Speech-Dataset/,-,,-,-,-,Tacotron2+WaveGlow,https://news.machinelearning.sg/posts/text_to_speech_with_tacotron2_and_waveglow,Text_to_Speech_with_Tacotron2_and_WaveGlow.ipynb
 Singlish Text-to-Speech,IMDA,https://www.imda.gov.sg/programme-listing/digital-services-lab/national-speech-corpus,-,,-,-,-,FastSpeech2+MelGAN,https://news.machinelearning.sg/posts/singlish_text_to_speech_with_malaya_speech/,Singlish_Text_to_Speech_with_Malaya_Speech.ipynb
 Mandarin Text-to-Speech,DataBaker,https://www.data-baker.com/data/index/source/,-,,-,-,-,Tacotron2-DDC-GST,https://news.machinelearning.sg/posts/mandarin_text_to_speech_with_coqui_tts/,Mandarin_Text_to_Speech_with_Coqui_TTS.ipynb
+Video Subtitling,Video,,-,,-,-,-,Wav2Vec2,https://news.machinelearning.sg/posts/video_subtitling_with_wav2vec2/,Video_Subtitling_with_Wav2Vec2.ipynb

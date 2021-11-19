@@ -9,7 +9,7 @@
 <div align="center">
   <!-- Notebooks -->
   <a href="https://github.com/eugenesiow/practical-ml">
-    <img src="https://img.shields.io/badge/notebooks-19-blue.svg?style=flat-square"
+    <img src="https://img.shields.io/badge/notebooks-20-blue.svg?style=flat-square"
       alt="Notebooks" />
   </a>
   <!-- License -->
@@ -91,6 +91,7 @@ to read instead.
 |Singlish Text-to-Speech|[IMDA](https://www.imda.gov.sg/programme-listing/digital-services-lab/national-speech-corpus)|FastSpeech2+MelGAN|[📝](https://news.machinelearning.sg/posts/singlish_text_to_speech_with_malaya_speech/ "Article")|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Singlish_Text_to_Speech_with_Malaya_Speech.ipynb "Open in Colab")|
 |Text-to-Speech         |[LJ Speech](https://keithito.com/LJ-Speech-Dataset/)                                         |Tacotron2+WaveGlow|[📝](https://news.machinelearning.sg/posts/text_to_speech_with_tacotron2_and_waveglow "Article") |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Text_to_Speech_with_Tacotron2_and_WaveGlow.ipynb "Open in Colab")|
 |Text-to-Speech         |Private                                                                                      |SileroTTS         |[📝](https://news.machinelearning.sg/posts/text_to_speech_with_silero "Article")                 |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Text_to_Speech_with_Silero.ipynb "Open in Colab")                |
+|Video Subtitling       |Video                                                                                        |Wav2Vec2          |[📝](https://news.machinelearning.sg/posts/video_subtitling_with_wav2vec2/ "Article")            |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Video_Subtitling_with_Wav2Vec2.ipynb "Open in Colab")            |
 
 
 
