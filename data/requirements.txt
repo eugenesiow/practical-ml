@@ -2,6 +2,7 @@ chardet==4.0.0
 DataProperty==0.50.0
 mbstrdecoder==1.0.1
 msgfy==0.1.0
+nbconvert==7.2.5
 pathvalidate==2.3.1
 pytablewriter==0.58.0
 python-dateutil==2.8.1

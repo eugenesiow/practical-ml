@@ -1,4 +1,6 @@
 import csv
+import nbformat
+from nbconvert import MarkdownExporter
 from pathlib import Path
 from operator import itemgetter
 from pytablewriter import MarkdownTableWriter
@@ -21,6 +23,24 @@ def create_toc(toc_contents):
     return toc_str
 
 
+def generate_page(notebook_name):
+    notebook_path_obj = Path(notebook_name)
+    pages_folder = Path('pages/') / notebook_path_obj.stem
+    pages_folder.mkdir(parents=True, exist_ok=True)
+    pages_path = (pages_folder / notebook_path_obj).with_suffix('.md')
+    notebook_path = Path('../notebooks/') / notebook_name
+    if not pages_path.exists():
+        nb = nbformat.read(notebook_path, as_version=4)
+        md_exporter = MarkdownExporter()
+        (body, resources) = md_exporter.from_notebook_node(nb)
+        outputs = resources['outputs']
+        for key, val in outputs.items():
+            with open(pages_folder / key, 'wb') as f:
+                f.write(val)
+        with open(pages_path, 'w', encoding='utf-8') as f:
+            f.write(body)
+
+
 def create_section(section_list, name):
     long_form = ['Natural Language Processing (NLP)']
     counter = 0
@@ -33,6 +53,8 @@ def create_section(section_list, name):
         header = ['Task', 'Dataset', 'Our Model', '📝', 'Notebook']
     values_matrix = []
     for row in section_list:
+        notebook_name = row[-1]
+        generate_page(notebook_name)
         if name in long_form:
             values_matrix.append([
                 row[0],

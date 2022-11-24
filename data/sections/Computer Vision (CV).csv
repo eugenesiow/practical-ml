@@ -2,6 +2,7 @@ task,dataset,dataset_link,sota,sota_link,metric,sota_acc,notebook_acc,notebook_m
 Remove Image Background,Photo,,-,,-,-,-,DeepLabV3,https://news.machinelearning.sg/posts/beautiful_profile_pics_remove_background_image_with_deeplabv3,Remove_Image_Background_DeepLabV3.ipynb
 Detect People From Images,Photo,,-,,-,-,-,YOLOv5,https://news.machinelearning.sg/posts/object_detection_with_yolov5,Detect_Persons_From_Image_YOLOv5.ipynb
 Anime Super Resolution,Image,,-,,-,-,-,Waifu2x+CARN,https://news.machinelearning.sg/posts/anime_super_resolution_with_pytorch,Anime_Super_Resolution_PyTorch.ipynb
+Face Super Resolution,Image,,-,,-,-,-,Real-ESRGAN,https://news.machinelearning.sg/posts/face_super_resolution_with_real_esrgan,Face_Super_Resolution_Real_ESRGAN.ipynb
 Optical Character Recognition,Image,,-,,-,-,-,TrOCR,https://news.machinelearning.sg/posts/ocr_from_images_with_transformers,OCR_from_Images_with_Transformers.ipynb
 Anime Character GAN,Private,,-,,-,-,-,StyleGAN2,https://news.machinelearning.sg/posts/anicharagan_anime_character_generation_with_stylegan2,Anime_Character_Generation_with_StyleGAN2.ipynb
 Face to Anime,Photo,,-,,-,-,-,AnimeGANv2,https://news.machinelearning.sg/posts/face_to_anime_with_animeganv2,Face_to_Anime_with_AnimeGANv2.ipynb
