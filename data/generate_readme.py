@@ -1,5 +1,6 @@
 import csv
 import nbformat
+from datetime import datetime
 from nbconvert import MarkdownExporter
 from pathlib import Path
 from operator import itemgetter
@@ -23,11 +24,49 @@ def create_toc(toc_contents):
     return toc_str
 
 
-def generate_page(notebook_name):
-    notebook_path_obj = Path(notebook_name)
+def generate_header(notebook_name, section_name):
+    title = notebook_name.replace('_', ' ').replace('.ipynb', '')
+    date_now = datetime.now().strftime('%Y-%m-%dT%H:%M:%S+08:00')
+    section_title = section_name.replace('(CV)', '').replace('(NLP)', '').strip()
+    header_text = f"""---
+title: "{title}"
+date: {date_now}
+tags: ["{section_title}", "Deep Learning", "Machine Learning", "GPU", "Source Code", "Jupyter Notebook", "Colab"]
+author: "Eugene"
+showToc: true
+TocOpen: false
+draft: false
+cover:
+    image: "{Path(notebook_name).with_suffix('.png')}"
+    alt: "{title}"
+---
+
+> **tl;dr** 
+>
+
+## Practical Machine Learning - Learn Step-by-Step to Train a Model
+
+A great way to learn is by going step-by-step through the process of training and evaluating the model.
+
+Hit the **`Open in Colab`** button below to launch a Jupyter Notebook in the cloud with a step-by-step walkthrough.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{notebook_name} "Open in Colab")
+
+Continue on if you prefer reading the code here.
+
+## {title}
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{notebook_name} "Open in Colab")
+
+"""
+    return header_text
+
+
+def generate_page(notebook_name, section_name):
+    notebook_path_obj = Path(notebook_name.lower())
     pages_folder = Path('pages/') / notebook_path_obj.stem
     pages_folder.mkdir(parents=True, exist_ok=True)
-    pages_path = (pages_folder / notebook_path_obj).with_suffix('.md')
+    pages_path = pages_folder / 'index.md'
+    # pages_path = (pages_folder / notebook_path_obj).with_suffix('.md')
     notebook_path = Path('../notebooks/') / notebook_name
     if not pages_path.exists():
         nb = nbformat.read(notebook_path, as_version=4)
@@ -37,7 +76,9 @@ def generate_page(notebook_name):
         for key, val in outputs.items():
             with open(pages_folder / key, 'wb') as f:
                 f.write(val)
+        header = generate_header(notebook_name, section_name)
         with open(pages_path, 'w', encoding='utf-8') as f:
+            f.write(header)
             f.write(body)
 
 
@@ -54,7 +95,7 @@ def create_section(section_list, name):
     values_matrix = []
     for row in section_list:
         notebook_name = row[-1]
-        generate_page(notebook_name)
+        generate_page(notebook_name, name)
         if name in long_form:
             values_matrix.append([
                 row[0],
