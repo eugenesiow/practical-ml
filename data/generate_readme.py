@@ -11,6 +11,8 @@ from operator import itemgetter
 from pytablewriter import MarkdownTableWriter
 from dotenv import load_dotenv
 from pyunsplash import PyUnsplash
+from PIL import Image, ImageDraw, ImageFont, ImageChops
+import textwrap
 
 
 def create_anchor(title):
@@ -35,24 +37,64 @@ def get_title(body):
     return title
 
 
-def create_splash(search_term, folder_path):
-    UNSPLASH_ACCESS_KEY = os.getenv('UNSPLASH_ACCESS_KEY')
-    pu = PyUnsplash(api_key=UNSPLASH_ACCESS_KEY)
-    search = pu.search(type_='photos', query=f'splash,{search_term}')
-    for photo in search.entries:
-        r = requests.get(photo.link_download, stream=True)
-        if r.status_code == 200:
-            # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
-            r.raw.decode_content = True
+def draw_multiple_line_text(image, text, font, text_color):
+    line_padding = 10
+    draw = ImageDraw.Draw(image)
+    image_width, image_height = image.size
+    lines = textwrap.wrap(text, width=20)
+    text_start_height = (image_height - (len(lines) * 80)) / 2
+    y_text = text_start_height
 
-            filename = folder_path / f'{photo.id}.png'
-            # Open a local file with wb ( write binary ) permission.
-            with open(filename, 'wb') as f:
-                shutil.copyfileobj(r.raw, f)
+    for line in lines:
+        left, top, right, bottom = font.getbbox(line)
+        line_width = right - left
+        line_height = bottom - top
+        draw.text(((image_width - line_width) / 2, y_text),
+                  line, font=font, fill=text_color, stroke_width=2, stroke_fill='white')
+        y_text += line_height + line_padding
 
-            print('Image sucessfully Downloaded: ', filename)
-        else:
-            print('Image Couldn\'t be retreived')
+
+def make_thumb(f_in, size=(1200, 630)):
+    image = Image.open(f_in)
+    image.thumbnail(size, Image.Resampling.LANCZOS)
+    image_size = image.size
+
+    thumb = image.crop( (0, 0, size[0], size[1]))
+
+    offset_x = int(max((size[0] - image_size[0]) / 2, 0))
+    offset_y = int(max((size[1] - image_size[1]) / 2, 0))
+
+    thumb = ImageChops.offset(thumb, offset_x, offset_y)
+
+    return thumb
+
+
+def create_splash(search_term, folder_path, notebook_name):
+    MAX_SIZE = (1200, 630)
+    # UNSPLASH_ACCESS_KEY = os.getenv('UNSPLASH_ACCESS_KEY')
+    # pu = PyUnsplash(api_key=UNSPLASH_ACCESS_KEY)
+    # search = pu.search(type_='photos', query=f'splash,{search_term}')
+    # for photo in search.entries:
+    #     r = requests.get(photo.link_download, stream=True)
+    #     if r.status_code == 200:
+    #         # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
+    #         r.raw.decode_content = True
+    #         filename = folder_path / f'{photo.id}.png'
+    #         with open(filename, 'wb') as f:
+    #             shutil.copyfileobj(r.raw, f)
+    #         print('Image successfully downloaded: ', filename)
+    #     else:
+    #         print('Image could not be retrieved.')
+
+    for idx, image_path in enumerate(folder_path.glob('**/*.png')):
+        output_image_path = image_path.parent / (Path(notebook_name).stem + '_' + str(idx) + '.png')
+        image = make_thumb(image_path, size=MAX_SIZE)
+        fontsize = 80  # starting font size
+        font = ImageFont.truetype("bahnschrift.ttf", fontsize)
+
+        text_color = (0, 0, 0)
+        draw_multiple_line_text(image, search_term, font, text_color)
+        image.save(output_image_path)
 
 
 def process_body(body):
@@ -77,7 +119,7 @@ showToc: true
 TocOpen: false
 draft: false
 cover:
-    image: "{Path(notebook_name).with_suffix('.png')}"
+    image: "splash/{Path(notebook_name).stem}_0.png"
     alt: "{title}"
 ---
 
@@ -120,7 +162,8 @@ def generate_page(notebook_name, section_name):
             f.write(header)
             body = process_body(body)
             f.write(body)
-        create_splash(title_full, splash_path)
+        # create_splash(title_full, splash_path, notebook_name)
+    create_splash('Face Super Resolution with ESRGAN', splash_path, notebook_name)
 
 
 def create_section(section_list, name):
