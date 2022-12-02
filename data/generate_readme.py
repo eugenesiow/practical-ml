@@ -71,20 +71,20 @@ def make_thumb(f_in, size=(1200, 630)):
 
 def create_splash(search_term, folder_path, notebook_name):
     MAX_SIZE = (1200, 630)
-    # UNSPLASH_ACCESS_KEY = os.getenv('UNSPLASH_ACCESS_KEY')
-    # pu = PyUnsplash(api_key=UNSPLASH_ACCESS_KEY)
-    # search = pu.search(type_='photos', query=f'splash,{search_term}')
-    # for photo in search.entries:
-    #     r = requests.get(photo.link_download, stream=True)
-    #     if r.status_code == 200:
-    #         # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
-    #         r.raw.decode_content = True
-    #         filename = folder_path / f'{photo.id}.png'
-    #         with open(filename, 'wb') as f:
-    #             shutil.copyfileobj(r.raw, f)
-    #         print('Image successfully downloaded: ', filename)
-    #     else:
-    #         print('Image could not be retrieved.')
+    UNSPLASH_ACCESS_KEY = os.getenv('UNSPLASH_ACCESS_KEY')
+    pu = PyUnsplash(api_key=UNSPLASH_ACCESS_KEY)
+    search = pu.search(type_='photos', query=f'splash,{search_term}')
+    for photo in search.entries:
+        r = requests.get(photo.link_download, stream=True)
+        if r.status_code == 200:
+            # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
+            r.raw.decode_content = True
+            filename = folder_path / f'{photo.id}.png'
+            with open(filename, 'wb') as f:
+                shutil.copyfileobj(r.raw, f)
+            print('Image successfully downloaded: ', filename)
+        else:
+            print('Image could not be retrieved.')
 
     for idx, image_path in enumerate(folder_path.glob('**/*.png')):
         output_image_path = image_path.parent / (Path(notebook_name).stem + '_' + str(idx) + '.png')
@@ -162,8 +162,8 @@ def generate_page(notebook_name, section_name):
             f.write(header)
             body = process_body(body)
             f.write(body)
-        # create_splash(title_full, splash_path, notebook_name)
-    create_splash('Face Super Resolution with ESRGAN', splash_path, notebook_name)
+        create_splash(title_full, splash_path, notebook_name)
+    # create_splash('Face Super Resolution with ESRGAN', splash_path, notebook_name)
 
 
 def create_section(section_list, name):
@@ -175,7 +175,7 @@ def create_section(section_list, name):
     if name in long_form:
         header = ['Task', 'Dataset', 'SOTA', 'SOTA Acc', 'Our Acc', '📝', 'Notebook']
     else:
-        header = ['Task', 'Dataset', 'Our Model', '📝', 'Notebook']
+        header = ['Task', 'Dataset', 'Model', '📝', 'Notebook']
     values_matrix = []
     for row in section_list:
         notebook_name = row[-1]
