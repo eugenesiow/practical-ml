@@ -1,10 +1,16 @@
+import re
+import os
 import csv
+import shutil
+import requests
 import nbformat
 from datetime import datetime
 from nbconvert import MarkdownExporter
 from pathlib import Path
 from operator import itemgetter
 from pytablewriter import MarkdownTableWriter
+from dotenv import load_dotenv
+from pyunsplash import PyUnsplash
 
 
 def create_anchor(title):
@@ -24,8 +30,42 @@ def create_toc(toc_contents):
     return toc_str
 
 
-def generate_header(notebook_name, section_name):
-    title = notebook_name.replace('_', ' ').replace('.ipynb', '')
+def get_title(body):
+    title = re.findall(r"^#\s(.*?)\n", body)[0]
+    return title
+
+
+def create_splash(search_term, folder_path):
+    UNSPLASH_ACCESS_KEY = os.getenv('UNSPLASH_ACCESS_KEY')
+    pu = PyUnsplash(api_key=UNSPLASH_ACCESS_KEY)
+    search = pu.search(type_='photos', query=f'splash,{search_term}')
+    for photo in search.entries:
+        r = requests.get(photo.link_download, stream=True)
+        if r.status_code == 200:
+            # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
+            r.raw.decode_content = True
+
+            filename = folder_path / f'{photo.id}.png'
+            # Open a local file with wb ( write binary ) permission.
+            with open(filename, 'wb') as f:
+                shutil.copyfileobj(r.raw, f)
+
+            print('Image sucessfully Downloaded: ', filename)
+        else:
+            print('Image Couldn\'t be retreived')
+
+
+def process_body(body):
+    replacement_header = """
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{notebook_name} "Open in Colab")
+"""
+    body = re.sub(r"---\s+(.*?)\s+---", replacement_header, body)
+    body = re.sub(r"(^|\n)(#)\s", "\\n#\\2 ", body)
+    return body
+
+
+def generate_header(notebook_name, section_name, title_full):
+    title = title_full if title_full else notebook_name.replace('_', ' ').replace('.ipynb', '')
     date_now = datetime.now().strftime('%Y-%m-%dT%H:%M:%S+08:00')
     section_title = section_name.replace('(CV)', '').replace('(NLP)', '').strip()
     header_text = f"""---
@@ -53,10 +93,6 @@ Hit the **`Open in Colab`** button below to launch a Jupyter Notebook in the clo
 
 Continue on if you prefer reading the code here.
 
-## {title}
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{notebook_name} "Open in Colab")
-
 """
     return header_text
 
@@ -66,6 +102,8 @@ def generate_page(notebook_name, section_name):
     pages_folder = Path('pages/') / notebook_path_obj.stem
     pages_folder.mkdir(parents=True, exist_ok=True)
     pages_path = pages_folder / 'index.md'
+    splash_path = pages_folder / 'splash'
+    splash_path.mkdir(parents=True, exist_ok=True)
     # pages_path = (pages_folder / notebook_path_obj).with_suffix('.md')
     notebook_path = Path('../notebooks/') / notebook_name
     if not pages_path.exists():
@@ -76,10 +114,13 @@ def generate_page(notebook_name, section_name):
         for key, val in outputs.items():
             with open(pages_folder / key, 'wb') as f:
                 f.write(val)
-        header = generate_header(notebook_name, section_name)
+        title_full = get_title(body)
+        header = generate_header(notebook_name, section_name, title_full)
         with open(pages_path, 'w', encoding='utf-8') as f:
             f.write(header)
+            body = process_body(body)
             f.write(body)
+        create_splash(title_full, splash_path)
 
 
 def create_section(section_list, name):
@@ -157,4 +198,5 @@ def generate_readme(sections_dir, template_file, output_file):
 
 
 if __name__ == '__main__':
+    load_dotenv()
     generate_readme('sections/', 'template.md', '../README.md')
