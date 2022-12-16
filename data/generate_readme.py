@@ -121,6 +121,7 @@ draft: false
 cover:
     image: "splash/{Path(notebook_name).stem}_0.png"
     alt: "{title}"
+    relative: true
 ---
 
 > **tl;dr** 
