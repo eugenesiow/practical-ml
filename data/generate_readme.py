@@ -97,8 +97,8 @@ def create_splash(search_term, folder_path, notebook_name):
         image.save(output_image_path)
 
 
-def process_body(body):
-    replacement_header = """
+def process_body(body, notebook_name):
+    replacement_header = f"""
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/{notebook_name} "Open in Colab")
 """
     body = re.sub(r"---\s+(.*?)\s+---", replacement_header, body)
@@ -160,7 +160,7 @@ def generate_page(notebook_name, section_name):
         header = generate_header(notebook_name, section_name, title_full)
         with open(pages_path, 'w', encoding='utf-8') as f:
             f.write(header)
-            body = process_body(body)
+            body = process_body(body, notebook_name)
             f.write(body)
         create_splash(title_full, splash_path, notebook_name)
     # create_splash('Face Super Resolution with ESRGAN', splash_path, notebook_name)
