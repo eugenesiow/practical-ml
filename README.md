@@ -9,7 +9,7 @@
 <div align="center">
   <!-- Notebooks -->
   <a href="https://github.com/eugenesiow/practical-ml">
-    <img src="https://img.shields.io/badge/notebooks-21-blue.svg?style=flat-square"
+    <img src="https://img.shields.io/badge/notebooks-22-blue.svg?style=flat-square"
       alt="Notebooks" />
   </a>
   <!-- License -->
@@ -93,6 +93,7 @@ to read instead.
 |Text-to-Speech         |[LJ Speech](https://keithito.com/LJ-Speech-Dataset/)                                         |Tacotron2+WaveGlow|[📝](https://news.machinelearning.sg/posts/text_to_speech_with_tacotron2_and_waveglow "Article") |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Text_to_Speech_with_Tacotron2_and_WaveGlow.ipynb "Open in Colab")|
 |Text-to-Speech         |Private                                                                                      |SileroTTS         |[📝](https://news.machinelearning.sg/posts/text_to_speech_with_silero "Article")                 |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Text_to_Speech_with_Silero.ipynb "Open in Colab")                |
 |Video Subtitling       |[LibriSpeech](https://paperswithcode.com/dataset/librispeech)                                |Wav2Vec2          |[📝](https://news.machinelearning.sg/posts/video_subtitling_with_wav2vec2/ "Article")            |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Video_Subtitling_with_Wav2Vec2.ipynb "Open in Colab")            |
+|Video Subtitling       |[Private](https://huggingface.co/openai/whisper-base#training-data)                          |Whisper           |[📝](https://news.machinelearning.sg/posts/video_subtitling_with_openai_whisper/ "Article")      |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/practical-ml/blob/master/notebooks/Video_Subtitling_with_OpenAI_Whisper.ipynb "Open in Colab")      |
 
 
 
