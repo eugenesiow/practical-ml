@@ -7,3 +7,4 @@ Optical Character Recognition,SROIE,https://paperswithcode.com/dataset/sroie,-,,
 Anime Character GAN,Private,,-,,-,-,-,StyleGAN2,https://news.machinelearning.sg/posts/anicharagan_anime_character_generation_with_stylegan2,Anime_Character_Generation_with_StyleGAN2.ipynb
 Face to Anime,Dataset-1,https://github.com/TachibanaYoshino/AnimeGAN/releases/tag/dataset-1,-,,-,-,-,AnimeGANv2,https://news.machinelearning.sg/posts/face_to_anime_with_animeganv2,Face_to_Anime_with_AnimeGANv2.ipynb
 Art Generation,WikiArt,https://github.com/cs-chan/ArtGAN/blob/master/WikiArt%20Dataset/README.md,-,,-,-,-,v-diffusion+CLIP,https://news.machinelearning.sg/posts/art_generation_with_v_diffusion,Art_Generation_with_v_Diffusion.ipynb
+Document Image Classification,RVL-CDIP,https://paperswithcode.com/dataset/rvl-cdip,-,,-,-,-,DiT,https://news.machinelearning.sg/posts/document_image_classification_dit,Document_Image_Classification_DiT.ipynb
